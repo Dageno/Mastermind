@@ -16,7 +16,7 @@ let comprobarArray = function(){
 }
 let pintar = function(){
     let color =  this.className.split(" ")[1];
-    let arrayPrueba = $currentDiv.getElementsByClassName('circulo');
+    let arrayPrueba = currentDiv.getElementsByClassName('circulo');
 
     for(let i = 0; i<currentDiv.getElementsByClassName("circulo").length;i++){
         if(arrayPrueba[i].getAttribute("name") != "coloreado"){
