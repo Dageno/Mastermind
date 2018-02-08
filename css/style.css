@@ -1,0 +1,114 @@
+body{
+    background-color: ivory;
+}
+.cabecera{
+    font-size: 2rem;
+    font-weight: bold;
+    height: 53px;
+}
+.final{
+    display: flex;
+    margin-top: 10px;
+    font-size: 1.5rem;
+    justify-content: flex-end;
+}
+.curso{
+    border-bottom: solid;
+    padding-bottom: 1rem;
+    border-width: 0.3px;
+}
+.container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 10px;
+    height: 200px;
+    width: 75%;
+}
+.panel{
+    display: flex;
+    justify-content: flex-start space-around;
+    flex-flow: row wrap;
+    margin-right: 3%;
+    width: 250px;
+    right: 0;
+    
+}
+.fijo{
+    position: fixed;
+    top: 30%;
+}
+div.panel > div.circulo{
+    width: 50px; 
+    height: 50px;
+    border: 1px solid #555;
+    border-radius: 50%;
+}
+.circulo{
+    width: 100px; 
+    height: 100px;
+    border: 1px solid #555;
+    background-color: lightgrey;
+    border-radius: 50%;
+}
+.menu{
+        width: 50px; 
+        height: 50px;
+        border: 1px solid #555;
+        background-color: lightgrey;
+        border-radius: 50%;
+    
+}
+.checkIN{
+    width: 50px; 
+    height: 50px;
+    background-image: url("https://media.grouponisrael.co.il/_media/images/components/ok_circle.png");
+    background-size: 50px;
+    background-size: 100%;
+    
+}
+.checkOUT{
+    width: 50px; 
+    height: 50px;
+    background-image: url("https://media.grouponisrael.co.il/_media/images/components/ok_circle.png");
+    background-size: 50px;
+    background-size: 100%;
+    filter: grayscale(100%);
+}
+.rojo{
+    background-color: red;
+}
+.verde{
+    background-color: green;
+}
+.azul{
+    background-color: blue;
+}
+.amarillo{
+    background-color: yellow;
+}
+.negro{
+    background-color: black;
+}
+.marron{
+    background-color: rgb(95, 25, 25);
+}
+.blanco{
+    background-color: white;
+}
+.naranja{
+    background-color:orangered;
+}
+.gris{
+    background-color: lightgrey;
+}
+.check{
+    width: 40px; 
+    height: 40px;
+    
+    border: 1px solid #555;
+
+  
+    border-radius: 50%;
+}
+
