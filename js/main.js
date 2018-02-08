@@ -61,7 +61,7 @@
                
                 currentDiv = document.getElementById('main').lastElementChild;
                 coincidencias = 0;
-                 window.scrollTo(window.height);
+                 window.scrollTo(0, window.innerHeight);
 
                 arrayPelotas = [undefined, undefined, undefined, undefined];
                 comprobarArray();
