@@ -5,6 +5,7 @@
 
         let colores = ["negro", "azul", "verde", "amarillo", "rojo", "naranja", "blanco", "marron"];
         let arrSolucion = new Array();
+        let arrCopia = new Array();
        
         var element = document.getElementsByClassName('container')[0];
         var nuevo = element.cloneNode(true);
@@ -20,6 +21,7 @@
             for(let i = 0; i<4;i++)
                 arrSolucion.push(colores[numeroAleatorio()])
             asignarEventos();
+            arrCopia = arrSolucion.slice();
             console.log(arrSolucion);
             
             
@@ -36,16 +38,17 @@
             
             let coincidencias = 0;
             for(let i = 0; i < 4; i++){
-                if(arrSolucion[i]===array[i]){
+                if(arrCopia[i]===array[i]){
                     currentDiv.getElementsByClassName('check')[coincidencias].className = 'check negro';
                     negros++;
+                    arrCopia[i] = undefined;
                     coincidencias++;
                 }
                     
             }
             if(coincidencias != 4){
                 array.forEach(function(elemento, index){
-                    if(arrSolucion.indexOf(elemento) >=0 && index != arrSolucion.indexOf(elemento)){
+                    if(arrCopia.indexOf(elemento) >=0 && index != arrCopia.indexOf(elemento)){
                         currentDiv.getElementsByClassName('check')[coincidencias].className = 'check blanco';
                         coincidencias++;
                     }
@@ -56,7 +59,7 @@
                 elementosDiv.forEach(function(element){
                     element.setAttribute("style", "pointer-events: none;");
                 })
-
+                arrCopia = arrSolucion.slice();
                 crearLinea();
                
                 currentDiv = document.getElementById('main').lastElementChild;
