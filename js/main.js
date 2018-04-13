@@ -50,6 +50,7 @@
                 array.forEach(function(elemento, index){
                     if(arrCopia.indexOf(elemento) >=0 && index != arrCopia.indexOf(elemento)){
                         currentDiv.getElementsByClassName('check')[coincidencias].className = 'check blanco';
+                        arrCopia[arrCopia.indexOf(elemento)] = undefined;
                         coincidencias++;
                     }
                 
