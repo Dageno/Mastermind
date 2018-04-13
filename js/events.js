@@ -32,10 +32,7 @@ let pintar = function(){
 let borrar = function(index){
   arrayPelotas[index] = undefined;
   currentDiv.getElementsByClassName('circulo')[index].className = "circulo";
-  currentDiv.getElementsByClassName('circulo')[index].setAttribute("name", "prueba")
-
-  console.log(arrayPelotas);
-  
+  currentDiv.getElementsByClassName('circulo')[index].setAttribute("name", "prueba");
   comprobarArray();  
   
    
