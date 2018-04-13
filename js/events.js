@@ -7,7 +7,7 @@ let comprobarArray = function(){
         document.getElementById("check").setAttribute("class", "checkIN");
         document.getElementById("check").setAttribute("style", "pointer-events: ;");
         document.getElementById("check").addEventListener('click', masterMind.comprobar);
-        document.getElementById('main').scrollIntoView();
+        
     }else{
         document.getElementById("check").setAttribute("class", "checkOUT");
         document.getElementById("check").setAttribute("style", "pointer-events: none;");
