@@ -27,9 +27,8 @@
             
         }
     
-        let comprobarCoincidencia = function (){
-           
-            let arrayD =currentDiv.getElementsByClassName('circulo');
+        let comprobarCoincidencia = function (arrayD){
+          
             let array = [];
             let negros = 0;
             for(let i = 0; i<arrayD.length;i++){
