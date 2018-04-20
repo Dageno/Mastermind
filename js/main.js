@@ -1,6 +1,4 @@
 
-     let currentDiv = document.getElementById('main').lastElementChild;
-
     let MasterMind = function(){
 
         let colores = ["negro", "azul", "verde", "amarillo", "rojo", "naranja", "blanco", "marron"];
@@ -17,64 +15,50 @@
             
             for(let i = 0; i<4;i++)
                 arrSolucion.push(colores[numeroAleatorio()])
-            asignarEventos();
-            arrCopia = arrSolucion.slice();
             console.log(arrSolucion);
             
             
         }
     
-        let comprobarCoincidencia = function (arrayD){
+        let comprobarCoincidencia = function (array){
           
-            let array = [];
+            let pelotasCheck;
             let negros = 0;
-            for(let i = 0; i<arrayD.length;i++){
-                array[i] = arrayD[i].className.split(" ")[1];    
-            }
-            
+            let blancos = 0;
             let coincidencias = 0;
+
+            arrCopia = arrSolucion.slice();
             for(let i = 0; i < 4; i++){
                 if(arrCopia[i]===array[i]){
-                    currentDiv.getElementsByClassName('check')[coincidencias].className = 'check negro';
                     negros++;
                     arrCopia[i] = undefined;
+                    array[i] = undefined;
                     coincidencias++;
                 }
                     
             }
-            if(coincidencias != 4){
-                array.forEach(function(elemento, index){
-                    if(arrCopia.indexOf(elemento) >=0 && index != arrCopia.indexOf(elemento)){
-                        currentDiv.getElementsByClassName('check')[coincidencias].className = 'check blanco';
-                        arrCopia[arrCopia.indexOf(elemento)] = undefined;
-                        coincidencias++;
-                    }
-                
-                });
+            if(negros === 4)
+                return pelotasCheck = {
+                    negras: negros,
+                    blancas: blancos,
+                    victoria: true
 
-                var elementosDiv = Array.prototype.slice.call(currentDiv.getElementsByTagName('div'));
-                elementosDiv.forEach(function(element){
-                    element.setAttribute("style", "pointer-events: none;");
-                })
-                arrCopia = arrSolucion.slice();
-                crearLinea();
-               
-                currentDiv = document.getElementById('main').lastElementChild;
-                coincidencias = 0;
+                }
 
-                arrayPelotas = [undefined, undefined, undefined, undefined];
-                comprobarArray();
-                asignarEventos();
-            }else{
+            array.forEach(function(elemento, index){
+                if(arrCopia.indexOf(elemento) >=0 && index != arrCopia.indexOf(elemento) && elemento != undefined){
+                    arrCopia[arrCopia.indexOf(elemento)] = undefined;
+                    blancos++;
+                }
+            
+            });
 
-                alert("Has ganado!");
+            return pelotasCheck = {
+                negras: negros,
+                blancas: blancos,
+                victoria: false
 
             }
-            
-                
-            
-        
-            
         }
         
 
@@ -84,7 +68,3 @@
         }
 
     }
-
- 
-   // window.onclick = masterMind.comprobar;
-    
