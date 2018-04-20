@@ -1,7 +1,7 @@
 {
     let masterMind = new MasterMind();
     let arrayPelotas = [undefined, undefined, undefined, undefined];
-    let currentDiv = document.getElementById('main').lastElementChild;
+    let currentDiv = document.getElementById('main').firstElementChild;
 
     let comprobarArray = function(){
         if(!arrayPelotas.includes(undefined)){
@@ -49,7 +49,7 @@
     let reiniciarIntento = function(){
 
         crearLinea();
-        currentDiv = document.getElementById('main').lastElementChild;
+        currentDiv = document.getElementById('main').firstElementChild;
         arrayPelotas = [undefined, undefined, undefined, undefined];
         comprobarArray();
         asignarEventos();
@@ -105,7 +105,7 @@
             check.setAttribute("class", "check gris");
             div.appendChild(check);
         } 
-        document.getElementById('main').appendChild(div);
+        document.getElementById('main').insertBefore(div, currentDiv);
 
     }
 
