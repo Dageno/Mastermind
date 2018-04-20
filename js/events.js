@@ -6,7 +6,7 @@ let comprobarArray = function(){
     if(!arrayPelotas.includes(undefined)){
         document.getElementById("check").setAttribute("class", "checkIN");
         document.getElementById("check").setAttribute("style", "pointer-events: ;");
-        document.getElementById("check").addEventListener('click', masterMind.comprobar);
+        document.getElementById("check").addEventListener('click', masterMind.comprobar.bind(arrayPelotas));
         
     }else{
         document.getElementById("check").setAttribute("class", "checkOUT");
